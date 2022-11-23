@@ -1,3 +1,6 @@
+# Author: Samantha Piekos
+# Date: 10/10/22
+
 # install nad import packages
 dbutils.library.installPyPI("rpy2")
 import pandas as pd
@@ -34,10 +37,8 @@ spark.conf.set('spark.sql.execution.arrow.enabled', False)
 DATE_PANDEMIC_START = date(2020, 3, 5)
 
 # import functions from other notebooks
-%run
-"utilities/cohort_COVID_pregnancy_functions"
-%run
-"uilities/sars_cov_2_cohort_v2"
+import COVID19_vaccination_in_pregnancy.utilities.cohort_COVID_pregnancy_functions
+import COVID19_vaccination_in_pregnancy.utilities.sars_cov_2_cohort_functions
 
 
 # define functions
