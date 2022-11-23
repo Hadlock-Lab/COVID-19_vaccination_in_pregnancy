@@ -35,9 +35,9 @@ DATE_PANDEMIC_START = date(2020, 3, 5)
 
 # import functions from other notebooks
 %run
-"Cohort/Cohort_COVID_Pregnancy_Functions"
+"utilities/cohort_COVID_pregnancy_functions"
 %run
-"Utilities/sars_cov_2_cohort_v2"
+"uilities/sars_cov_2_cohort_v2"
 
 
 # define functions
