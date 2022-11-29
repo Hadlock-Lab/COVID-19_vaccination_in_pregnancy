@@ -1,5 +1,5 @@
 # import functions from other notebooks
-import COVID19_vaccination_in_pregnancy.utilities.ceda_tables_column_maps
+import COVID19_vaccination_in_pregnancy.utilities.ceda_utilities.ceda_tables_column_maps
 
 
 # get patient table
