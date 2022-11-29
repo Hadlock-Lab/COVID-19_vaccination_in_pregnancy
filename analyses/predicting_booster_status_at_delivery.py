@@ -41,7 +41,7 @@ DATE_PANDEMIC_START = datetime.date(2020, 3, 5)
 
 
 # import functions from other notebooks
-import COVID19_vaccination_in_pregnancy.utilities.cohort_COVID_pregnancy_functions
+import COVID19_vaccination_in_pregnancy.utilities.cohort_covid_pregnancy_functions
 import COVID19_vaccination_in_pregnancy.utilities.sars_cov_2_cohort_functions
 
 
