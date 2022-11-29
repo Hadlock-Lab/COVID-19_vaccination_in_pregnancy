@@ -39,7 +39,7 @@ CUTOFF_OMICRON_BA5_START = datetime.datetime(2022, 7, 2)  # omicron BA5 first re
 
 
 # import functions from other notebooks
-import COVID19_vaccination_in_pregnancy.utilities.general
+import COVID19_vaccination_in_pregnancy.utilities.general_utilities
 import COVID19_vaccination_in_pregnancy.utilities.sars_cov_2_cohort_functions
 
 
