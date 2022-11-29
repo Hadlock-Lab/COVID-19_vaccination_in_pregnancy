@@ -3,5 +3,6 @@ This contains the code used to conduct the analyses for Piekos et al. 2022 paper
 
 ## Subdirectories:
 * [analyses](https://github.com/Hadlock-Lab/COVID19_vaccination_in_pregnancy/tree/main/analyses) contains the scripts used to conduct all of the analyses presented in the paper
+* [define_cohorts](https://github.com/Hadlock-Lab/COVID19_vaccination_in_pregnancy/tree/main/define_cohorts) contains the scripts used to define the cohorts used in this study and create tables of additional patient information used in this study
 * [utilities](https://github.com/Hadlock-Lab/COVID19_vaccination_in_pregnancy/tree/main/utilities) contains additional utilities functions used to help run the analyses
 
