@@ -1,3 +1,7 @@
+# Author: Samantha Piekos
+# 10/31/22
+
+
 # load environment
 import datetime
 import math
@@ -866,7 +870,7 @@ with warnings.catch_warnings():
   reg_explainer = shap.KernelExplainer(reg_limited.predict, shap.sample(X_test, 1000))
   reg_shap_values = reg_explainer.shap_values(shap.sample(X_test, 1000))
   shap.summary_plot(reg_shap_values, shap.sample(X_test, 1000))
-  
+
 
 # plot AUC of Complete and Limited Gradient Boosting Regression Models
 # calculate the fpr and tpr for all thresholds of the classification
