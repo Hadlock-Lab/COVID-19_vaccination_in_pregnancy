@@ -25,7 +25,7 @@ DATE_START_FULL_VACCINATION = date(2021, 4, 16)
 
 
 # import functions from other notebooks
-import COVID19_vaccination_in_pregnancy.utilities.cohort_COVID_pregnancy_functions
+import COVID19_vaccination_in_pregnancy.utilities.cohort_covid_pregnancy_functions
 import COVID19_vaccination_in_pregnancy.utilities.general
 
 
