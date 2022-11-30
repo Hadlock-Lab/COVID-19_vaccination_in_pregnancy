@@ -2,8 +2,8 @@ spark.sql("SET spark.databricks.delta.formatCheck.enabled=false")
 
 
 # import functions from other notebooks
-import COVID19_vaccination_in_pregnancy.encounters_utilities
-import COVID19_vaccination_in_pregnancy.general_utilities
+import COVID19_vaccination_in_pregnancy.utilities.encounters_utilities
+import COVID19_vaccination_in_pregnancy.utilities.general_utilities
 
 
 # declare universal variables
