@@ -2,8 +2,8 @@
 # Date: 3/17/22
 
 # import functions from another notebook
-import utilities.conditions_cc_utilities
-import utilities.conditions_cc_registry
+import COVID19_vaccination_in_pregnancy.utilities.conditions_cc_utilities
+import COVID19_vaccination_in_pregnancy.utilities.conditions_cc_registry
 
 
 # define functions
