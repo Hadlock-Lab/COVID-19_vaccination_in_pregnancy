@@ -12,6 +12,7 @@ from pyspark.sql.functions import *
 
 # import functions from other notebooks
 import COVID19_vaccination_in_pregnancy.utilities.cohort_covid_pregnancy_functions
+import COVID19_vaccination_in_pregnancy.utilities.add_GPAL
 
 
 # define functions
