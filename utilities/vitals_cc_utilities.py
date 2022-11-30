@@ -11,7 +11,7 @@ pd.set_option('display.max_colwidth', None)
 
 
 # import functions from other notebooks
-import COVID19_vaccination_in_pregnancy.vitals_cc_registry
+import COVID19_vaccination_in_pregnancy.utilities.vitals_cc_registry
 
 
 # Get list of vital sign clinical concepts
