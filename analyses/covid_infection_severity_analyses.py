@@ -1,3 +1,7 @@
+# Author: Samantha Piekos
+# Date: 11/1/22
+
+
 # load environment
 dbutils.library.installPyPI("pywaffle")
 dbutils.library.installPyPI("rpy2")
