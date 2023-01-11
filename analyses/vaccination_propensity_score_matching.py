@@ -2,29 +2,31 @@
 # Date: 11/9/22
 
 # load environment
-import pandas as pd
-import numpy as np
-import scipy
+import math
 import matplotlib.pyplot as plt
-%matplotlib inline
+import numpy as np
+import pandas as pd
+import scipy
+
 from datetime import date, datetime
 from pyspark.sql.functions import rand, unix_timestamp
 from scipy import stats
-from sklearn.preprocessing import StandardScaler
-from sklearn.neighbors import NearestNeighbors
-from sklearn import datasets, linear_model
-from sklearn import metrics
+from sklearn import datasets, linear_model, metrics
+from sklearn.datasets import make_regression
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import KFold, cross_val_score
-from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
-from sklearn.datasets import make_regression
+from sklearn.neighbors import NearestNeighbors
+from sklearn.preprocessing import StandardScaler
 from sklearn.utils import shuffle
-import math
+
 !pip install psmpy
 from psmpy import PsmPy
 from psmpy.functions import cohenD
 from psmpy.plotting import *
+
+%matplotlib inline
 plt.rcParams.update({'font.size': 12})
 plt.rcParams['pdf.fonttype'] = 42
 np.random.seed(123)
