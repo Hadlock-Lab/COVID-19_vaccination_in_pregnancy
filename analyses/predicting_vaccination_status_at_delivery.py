@@ -24,8 +24,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import KFold, cross_val_score
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
-from statsmodels.stats.outliers_influence import variance_inflation_factor
 from sklearn.utils import shuffle
+from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 # set up graph parameters
 %matplotlib inline
