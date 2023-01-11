@@ -3,7 +3,7 @@ This contains the code used to conduct the analyses for Piekos et al. 2022 paper
 
 
 ## Installation
-We used Python version 3.8.10. Details of the computational requirements and needed packages for executing this repo can be found in [envrionment_package_versions.csv](https://github.com/Hadlock-Lab/COVID19_vaccination_in_pregnancy/environment_package_versions.csv).
+We used Python version 3.8.10. Details of the computational requirements and needed packages for executing this repo can be found in [envrionment_package_versions.csv](https://github.com/Hadlock-Lab/COVID19_vaccination_in_pregnancy/tree/main/environment_package_versions.csv).
 
 
 ## Subdirectories
