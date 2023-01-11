@@ -1,21 +1,21 @@
 # load the environment
-from datetime import date, datetime, timedelta
-from pyspark.sql.functions import unix_timestamp
-from dateutil.relativedelta import *
-from pyspark.sql.functions import lit
-from pyspark.sql.functions import col
-from pyspark.sql.functions import *
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
-%matplotlib inline
+import pandas as pd
 import seaborn as sns
 import statistics
+
+from datetime import date, datetime, timedelta
+from dateutil.relativedelta import *
+from pyspark.sql.functions import *, col, lit, unix_timestamp
 from sklearn.impute import SimpleImputer
+
 dbutils.library.installPyPI("lifelines")
 from lifelines import KaplanMeierFitter, CoxPHFitter
 from lifelines.statistics import logrank_test
 from scipy import stats
+
+%matplotlib inline
 
 
 # Set Unviersal Variables
