@@ -10,15 +10,15 @@ import statistics
 
 from datetime import date, datetime, timedelta
 from dateutil.relativedelta import *
-from pyspark.sql.functions import *
-from pyspark.sql.functions import col, lit, unix_timestamp
-from lifelines import KaplanMeierFitter, CoxPHFitter
-from lifelines.statistics import logrank_test
+from pyspark.sql.functions import *, col, lit, unix_timestamp
 from scipy import stats
 from sklearn.impute import SimpleImputer
 
 %matplotlib inline
+
 dbutils.library.installPyPI("lifelines")
+from lifelines import KaplanMeierFitter, CoxPHFitter
+from lifelines.statistics import logrank_test
 
 
 # define universal variables
