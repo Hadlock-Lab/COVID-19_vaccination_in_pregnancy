@@ -2,25 +2,24 @@
 # Date: 11/2/22
 
 # load environment
-from datetime import date, datetime, timedelta
-from pyspark.sql.functions import unix_timestamp
-from dateutil.relativedelta import *
-from pyspark.sql.functions import lit
-from pyspark.sql.functions import col
-from pyspark.sql.functions import *
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-%matplotlib inline
 import seaborn as sns
 import statistics
+
+from datetime import date, datetime, timedelta
+from dateutil.relativedelta import *
+from pyspark.sql.functions import *, col, lit, unix_timestamp
 from sklearn.impute import SimpleImputer
-!pip install lifelines
 from scipy import stats
-from statsmodels.stats.proportion import proportion_confint
 from statsmodels.stats.anova import AnovaRM
+from statsmodels.stats.proportion import proportion_confint
+
 dbutils.library.installPyPI("rpy2")
 import rpy2
+
+%matplotlib inline
 plt.rcParams.update({'font.size': 12})
 plt.rcParams['pdf.fonttype'] = 42
 
