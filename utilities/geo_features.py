@@ -19,7 +19,7 @@ https://svi.cdc.gov/Documents/Data/2018_SVI_Data/SVI2018Documentation.pdf
 '''
 
 # import functions from other notebooks
-import CEDA_tools.ceda_utilities.load_ceda_etl_tools
+import CEDA_tools_ver20221220.ceda_utilities.load_ceda_etl_tools
 
 
 # define functions
