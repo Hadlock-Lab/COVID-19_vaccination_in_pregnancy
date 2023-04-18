@@ -21,7 +21,6 @@ from sklearn.datasets import make_regression
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import KFold, cross_val_score
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
 from sklearn.utils import shuffle
@@ -557,10 +556,6 @@ y_train = y[:offset]
 y_test = y[offset:]
 
 
-# create and evaluate performance of the Logistic Regression Model
-# Create 10-fold cross validation object
-cv = KFold(n_splits=10, random_state=1, shuffle=True)
-
 # Create logistical regression object
 regr = LogisticRegression(max_iter=1000)
 
@@ -588,7 +583,9 @@ print('Coefficient of determination: %.2f'
 print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
 print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))
 print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
-print('Area Under the Curve: ', metrics.roc_auc_score(y_test, y_pred))
+precision, recall, thresholds = metrics.precision_recall_curve(y_test, y_pred)
+print('PR-AUC: ', metrics.auc(recall, precision))
+print('ROC-AUC: ', metrics.roc_auc_score(y_test, y_pred))
 print('Coefficient of determination:', metrics.r2_score(y_test, y_pred))
 
 print('\n')
@@ -613,11 +610,6 @@ xgb_classifier.fit(X_train,y_train)
 xgb_classifier.predict(X_test[1:2])
 xgb_classifier.score(X_test, y_test)
 
-# evaluate model
-scores = cross_val_score(xgb_classifier, X_train, y_train, cv=10)
-# report performance
-print(scores)
-
 # Make predictions using the testing set
 y_pred = xgb_classifier.predict(X_test)
 
@@ -625,7 +617,9 @@ y_pred = xgb_classifier.predict(X_test)
 print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
 print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))
 print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
-print('Area Under the Curve: ', metrics.roc_auc_score(y_test, y_pred))
+precision, recall, thresholds = metrics.precision_recall_curve(y_test, y_pred)
+print('PR-AUC: ', metrics.auc(recall, precision))
+print('ROC-AUC: ', metrics.roc_auc_score(y_test, y_pred))
 print('Coefficient of determination:', metrics.r2_score(y_test, y_pred))
 
 print('\n')
@@ -647,11 +641,6 @@ display(plt.show())
 rf = RandomForestRegressor(n_estimators = 1000, random_state = 42)
 rf.fit(X_train, y_train)
 
-# evaluate model
-scores = cross_val_score(rf, X_train, y_train, cv=10)
-# report performance
-print(scores)
-
 # Use the forest's predict method on the test data
 y_pred = rf.predict(X_test)
 
@@ -659,7 +648,9 @@ y_pred = rf.predict(X_test)
 print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
 print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))
 print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
-print('Area Under the Curve: ', metrics.roc_auc_score(y_test, y_pred))
+precision, recall, thresholds = metrics.precision_recall_curve(y_test, y_pred)
+print('PR-AUC: ', metrics.auc(recall, precision))
+print('ROC-AUC: ', metrics.roc_auc_score(y_test, y_pred))
 print('Coefficient of determination:', metrics.r2_score(y_test, y_pred))
 
 print('\n')
@@ -685,11 +676,6 @@ GradientBoostingRegressor(random_state=0)
 reg.predict(X_test[1:2])
 reg.score(X_test, y_test)
 
-# evaluate model
-scores = cross_val_score(reg, X_train, y_train, cv=10)
-# report performance
-print(scores)
-
 # Make predictions using the testing set
 y_pred = reg.predict(X_test)
 
@@ -697,7 +683,9 @@ y_pred = reg.predict(X_test)
 print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
 print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))
 print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
-print('Area Under the Curve: ', metrics.roc_auc_score(y_test, y_pred))
+precision, recall, thresholds = metrics.precision_recall_curve(y_test, y_pred)
+print('PR-AUC: ', metrics.auc(recall, precision))
+print('ROC-AUC: ', metrics.roc_auc_score(y_test, y_pred))
 print('Coefficient of determination:', metrics.r2_score(y_test, y_pred))
 
 print('\n')
@@ -752,12 +740,6 @@ GradientBoostingRegressor(random_state=0)
 reg_limited.predict(X_test[1:2])
 reg_limited.score(X_test, y_test)
 
-# evaluate model
-scores = cross_val_score(reg_limited, X_train, y_train, cv=10)
-# report performance
-print(scores)
-
-
 # Make predictions using the testing set
 y_pred = reg_limited.predict(X_test)
 
@@ -765,7 +747,9 @@ y_pred = reg_limited.predict(X_test)
 print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
 print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))
 print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
-print('Area Under the Curve: ', metrics.roc_auc_score(y_test, y_pred))
+precision, recall, thresholds = metrics.precision_recall_curve(y_test, y_pred)
+print('PR-AUC: ', metrics.auc(recall, precision))
+print('ROC-AUC: ', metrics.roc_auc_score(y_test, y_pred))
 print('Coefficient of determination:', metrics.r2_score(y_test, y_pred))
 
 print('\n')
